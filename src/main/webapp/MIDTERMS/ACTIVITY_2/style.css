@@ -1,0 +1,13 @@
+/* import Open Sans from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/* Use Google Fonts for all text and make spacing to 2.0 */
+body {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2.0px;
+}
+
+/* Add border to all text in body except for heading */
+body * {
+    border: 1px solid black;
+}
