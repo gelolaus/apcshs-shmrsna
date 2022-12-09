@@ -59,7 +59,7 @@ $("body").hover(function(){
 <br/>
 <br/>
 
-<a href="../../index.jsp">Back to Dashboard</a>
+<a href="../../index.jsp" style="border: none;">Back to Dashboard</a>
 
 </body>
 </html>

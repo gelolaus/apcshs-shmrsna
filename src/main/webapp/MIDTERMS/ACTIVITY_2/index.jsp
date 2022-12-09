@@ -13,27 +13,40 @@
     </head>
 
     <body>
+    
+    	<%@page import="java.text.DecimalFormat"  %>
 
         <%! 
         int[] SHKOMPA = {84, 83};
         int[] SHMDILT = {70, 85};
-        int[] SHBIO02 = {75, 70};
+        int[] SHBIO02 = {90, 71};
         int[] SHPEH03 = {70, 84};
         int[] SHPSIC2 = {75, 70};
         int[] SHNTREP = {82, 73};
         int[] SHUCSOP = {75, 77};
 
-        double SHKOMPAfin = (SHKOMPA[0] + SHKOMPA[1]) / 2;
-        double SHMDILTfin = (SHMDILT[0] + SHMDILT[1]) / 2;
-        double SHBIO02fin = (SHBIO02[0] + SHBIO02[1]) / 2;
-        double SHPEH03fin = (SHPEH03[0] + SHPEH03[1]) / 2;
-        double SHPSIC2fin = (SHPSIC2[0] + SHPSIC2[1]) / 2;
-        double SHNTREPfin = (SHNTREP[0] + SHNTREP[1]) / 2;
-        double SHUCSOPfin = (SHUCSOP[0] + SHUCSOP[1]) / 2;
+        double SHKOMPAdiv = (SHKOMPA[0] + SHKOMPA[1]);
+        double SHMDILTdiv = (SHMDILT[0] + SHMDILT[1]);
+        double SHBIO02div = (SHBIO02[0] + SHBIO02[1]);
+        double SHPEH03div = (SHPEH03[0] + SHPEH03[1]);
+        double SHPSIC2div = (SHPSIC2[0] + SHPSIC2[1]);
+        double SHNTREPdiv = (SHNTREP[0] + SHNTREP[1]);
+        double SHUCSOPdiv = (SHUCSOP[0] + SHUCSOP[1]);
 
-        double GWA = (SHKOMPAfin + SHMDILTfin + SHBIO02fin + SHPEH03fin + SHPSIC2fin + SHNTREPfin + SHUCSOPfin) / 7;
+        double SHKOMPAfin = SHKOMPAdiv / 2;
+        double SHMDILTfin = SHMDILTdiv / 2;
+        double SHBIO02fin = SHBIO02div / 2;
+        double SHPEH03fin = SHPEH03div / 2;
+        double SHPSIC2fin = SHPSIC2div / 2;
+        double SHNTREPfin = SHNTREPdiv / 2;
+        double SHUCSOPfin = SHUCSOPdiv / 2;
+
+        double GWAsum = (SHKOMPAfin + SHMDILTfin + SHBIO02fin + SHPEH03fin + SHPSIC2fin + SHNTREPfin + SHUCSOPfin);
+        double GWA = GWAsum / 7;
+        DecimalFormat TwoDForm = new DecimalFormat("#.00");
+        
         %>
-            <h1>Grade</h1>
+            <h1>Grades Table</h1>
             <!-- table with 8 blank rows and 8 blank columns -->
             <table>
                 <tr>
@@ -50,7 +63,7 @@
                     <th>SHKOMPA</th>
                     <td>Komunikasyon at Papanaliksik</td>
                     <td>STEM 213</td>
-                    <td>6</td>
+                    <td>3</td>
                     <td>Suan, Michael Andio T.</td>
                     <td><%= SHKOMPA[0] %></td>
                     <td><%= SHKOMPA[1] %></td>
@@ -95,7 +108,6 @@
                     <td><%= SHPSIC2[0] %></td>
                     <td><%= SHPSIC2[1] %></td>
                     <td><%= SHPSIC2fin %></td>
-                    <td></td>
                 </tr>
                 <tr>
                     <th>SHNTREP</th>
@@ -106,7 +118,7 @@
                     <td><%= SHNTREP[0] %></td>
                     <td><%= SHNTREP[1] %></td>
                     <td><%= SHNTREPfin %></td>
-                    <td></td>
+
                 </tr>
                 <tr>
                     <th>SHUCSOP</th>
@@ -117,32 +129,37 @@
                     <td><%= SHUCSOP[0] %></td>
                     <td><%= SHUCSOP[1] %></td>
                     <td><%= SHUCSOPfin %></td>
-                    <td></td>
                 </tr>
                 <tr>
-                    <th>GWA</th>
-                    <td><%= GWA %></td>
+                    <td style="border: none;"></td>
+                    <td style="border: none;"></td>
+                    <td style="border: none;"></td>
+                    <td style="border: none;"></td>
+                    <td style="border: none;"></td>
+                    <td style="border: none;"></td>
+                    <td>GWA</td>
+                    <td><%= TwoDForm.format(GWA) %></td>
                 </tr>
-                <script>
-                    // Add animation to when the document opens
-                    $(document).ready(function () {
-                        $("body").hide();
-                        $("body").fadeIn(1000);
-                    });
-
-                            // When body is hovered, change the background color to a random color then change everytime
-                            you rehover
-                    $("body").hover(function () {
-                        var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-                        $("body").css("background-color", "#" + randomColor);
-                    });
-                </script>
+            </table>
+				<script>
+				// Add animation to when the document opens
+				$(document).ready(function(){
+				    $("body").hide();
+				    $("body").fadeIn(1000);
+				});
+				
+				// When body is hovered, change the background color to a random color then change everytime you rehover
+				$("body").hover(function(){
+				    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+				    $("body").css("background-color", "#" + randomColor);
+				});
+				</script>
 
                 <br />
                 <br />
-                <br />
+                <p style="border: none;"> Credits to Joaquin Pacete for the 2 decimal places GWA. </p>
 
-                <a href="../../index.jsp">Back to Dashboard</a>
+                <a href="../../index.jsp" style="border: none;">Back to Dashboard</a>
 
     </body>
 
