@@ -6,10 +6,31 @@
         <meta charset="UTF-8">
         <title>Dashboard</title>
 
-        <!-- style.css -->
-        <link rel="stylesheet" type="text/css" href="style.css" />
+
         <!-- import jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <style>
+        /* import Open Sans from Google Fonts */
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+		
+		/* Use Google Fonts for all text and make spacing to 2.0 */
+		body {
+		    font-family: 'Open Sans', sans-serif;
+		    letter-spacing: 2.0px;
+		}
+		
+		/* Add border to table */
+		table {
+    	border: 1px solid black;
+    	border-collapse: collapse;
+        width: 100%;
+		}
+		
+		td, th {
+		border: 1px solid black;
+		}
+        </style>
     </head>
 
     <body>
@@ -17,13 +38,13 @@
     	<%@page import="java.text.DecimalFormat"  %>
 
         <%! 
-        int[] SHKOMPA = {84, 83};
-        int[] SHMDILT = {70, 85};
-        int[] SHBIO02 = {90, 71};
-        int[] SHPEH03 = {70, 84};
-        int[] SHPSIC2 = {75, 70};
-        int[] SHNTREP = {82, 73};
-        int[] SHUCSOP = {75, 77};
+        int[] SHKOMPA = {83, 85};
+        int[] SHMDILT = {70, 89};
+        int[] SHBIO02 = {91, 86};
+        int[] SHPEH03 = {95, 80};
+        int[] SHPSIC2 = {75, 80};
+        int[] SHNTREP = {88, 89};
+        int[] SHUCSOP = {86, 79};
 
         double SHKOMPAdiv = (SHKOMPA[0] + SHKOMPA[1]);
         double SHMDILTdiv = (SHMDILT[0] + SHMDILT[1]);
@@ -49,7 +70,7 @@
             <h1>Grades Table</h1>
             <!-- table with 8 blank rows and 8 blank columns -->
             <table>
-                <tr>
+                <tr style="background-color: #e9ecef; color: #495057;">
                     <th>Subject Code</th>
                     <th>Subject Name</th>
                     <th>Section</th>
@@ -67,7 +88,7 @@
                     <td>Suan, Michael Andio T.</td>
                     <td><%= SHKOMPA[0] %></td>
                     <td><%= SHKOMPA[1] %></td>
-                    <td><%= SHKOMPAfin %></td>
+                    <td style="background-color: #b8daff;"><%= SHKOMPAfin %></td>
                 </tr>
                 <tr>
                     <th>SHMDILT</th>
@@ -77,7 +98,7 @@
                     <td>Firmalo, Justin Jeff Refe</td>
                     <td><%= SHMDILT[0]%></td>
                     <td><%= SHMDILT[1]%></td>
-                    <td><%= SHMDILTfin %></td>
+                    <td style="background-color: #b8daff;"><%= SHMDILTfin %></td>
                 </tr>
                 <tr>
                     <th>SHBIO02</th>
@@ -87,7 +108,7 @@
                     <td>Francisco, Ermor Dela Rosa</td>
                     <td><%= SHBIO02[0] %></td>
                     <td><%= SHBIO02[1] %></td>
-                    <td><%= SHBIO02fin %></td>
+                    <td style="background-color: #b8daff;"><%= SHBIO02fin %></td>
                 </tr>
                 <tr>
                     <th>SHPEH03</th>
@@ -97,7 +118,7 @@
                     <td>Galeste, Joanna Isabel Vergara</td>
                     <td><%= SHPEH03[0] %></td>
                     <td><%= SHPEH03[1] %></td>
-                    <td><%= SHPEH03fin %></td>
+                    <td style="background-color: #b8daff;"><%= SHPEH03fin %></td>
                 </tr>
                 <tr>
                     <th>SHPSIC2</th>
@@ -107,7 +128,7 @@
                     <td>Babalcon Monique Lois Flores</td>
                     <td><%= SHPSIC2[0] %></td>
                     <td><%= SHPSIC2[1] %></td>
-                    <td><%= SHPSIC2fin %></td>
+                    <td style="background-color: #b8daff;"><%= SHPSIC2fin %></td>
                 </tr>
                 <tr>
                     <th>SHNTREP</th>
@@ -117,7 +138,7 @@
                     <td>Perez, Ryan John Igot</td>
                     <td><%= SHNTREP[0] %></td>
                     <td><%= SHNTREP[1] %></td>
-                    <td><%= SHNTREPfin %></td>
+                    <td style="background-color: #b8daff;"><%= SHNTREPfin %></td>
 
                 </tr>
                 <tr>
@@ -128,7 +149,7 @@
                     <td>Biñas, Jeanric Patotoy</td>
                     <td><%= SHUCSOP[0] %></td>
                     <td><%= SHUCSOP[1] %></td>
-                    <td><%= SHUCSOPfin %></td>
+                    <td style="background-color: #b8daff;"><%= SHUCSOPfin %></td>
                 </tr>
                 <tr>
                     <td style="border: none;"></td>
@@ -138,7 +159,7 @@
                     <td style="border: none;"></td>
                     <td style="border: none;"></td>
                     <td>GWA</td>
-                    <td><%= TwoDForm.format(GWA) %></td>
+                    <td style="background-color: #28a745; color: white;"><%= TwoDForm.format(GWA) %></td>
                 </tr>
             </table>
 				<script>
@@ -147,17 +168,18 @@
 				    $("body").hide();
 				    $("body").fadeIn(1000);
 				});
-				
-				// When body is hovered, change the background color to a random color then change everytime you rehover
-				$("body").hover(function(){
-				    var randomColor = Math.floor(Math.random()*16777215).toString(16);
-				    $("body").css("background-color", "#" + randomColor);
-				});
+                
+                $(document).ready(function(){
+                    $("tr:gt(0)").hover(function(){
+                        $(this).css("background-color", "#e9ecef");
+                        }, function(){
+                        $(this).css("background-color", "#f8f9fa");
+                    });
+                });
 				</script>
 
                 <br />
                 <br />
-                <p style="border: none;"> Credits to Joaquin Pacete for the 2 decimal places GWA. </p>
 
                 <a href="../../index.jsp" style="border: none;">Back to Dashboard</a>
 
