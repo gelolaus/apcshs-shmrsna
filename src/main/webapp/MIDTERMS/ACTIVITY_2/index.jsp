@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>Dashboard</title>
+        <title>Activity 2</title>
 
 
         <!-- import jQuery -->
