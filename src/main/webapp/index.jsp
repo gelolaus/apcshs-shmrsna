@@ -35,31 +35,31 @@
 <!-- Table with links to the different pages -->
 <table>
     <tr class="tr">
-    	<th>Activity Number</th>
-    	<th>Activity Title</th>
-    	<th>Activity Description</th>
-    	<th>Resources Used</th>
+    	<th>Unique Code</th>
+    	<th>Title</th>
+    	<th>Description</th>
+    	<th>Resources</th>
     </tr>
     <tr>
-    	<th><a href="MIDTERMS/ACTIVITY_1/index.jsp">Activity 1</a></th>
+    	<th><a href="MIDTERMS/ACTIVITY_1/index.jsp">Activity1</a></th>
     	<td>Payroll Slip</td>
     	<td>The purpose of this project is to create a payroll slip that does simple payroll calculations.</td>
     	<td>None</td>
     </tr>
     <tr>
-        <th><a href="MIDTERMS/ACTIVITY_2/index.jsp">Activity 2</a></th>
+        <th><a href="MIDTERMS/ACTIVITY_2/index.jsp">Activity2</a></th>
         <td>Grades Table</td>
         <td>The purpose of this project is to create a grades table that calculates the student's Final Grade and GWA</td>
         <td>2 Decimal GWA - Joaquin Pacete</td>
     </tr>
     <tr>
-    	<th><a href="MIDTERMS/ACTIVITY_3/index.jsp">Activity 3</a></th>
+    	<th><a href="MIDTERMS/ACTIVITY_3/index.jsp">Demo1</a></th>
     	<td>Package and Classes Demo</td>
     	<td>This is a demo project done to learn about the use of Packages and Classes</td>
     	<td>All Code - Joaquin Pacete</td>
     </tr>
     <tr>
-    	<th><a href="MIDTERMS/ACTIVITY_4/index.jsp">Activity 4</a></th>
+    	<th><a href="MIDTERMS/ACTIVITY_4/index.jsp">Activity3</a></th>
     	<td>Net Income Computation</td>
     	<td>The purpose of this project is to create a net income computation to calculate a worker's net income</td>
     	<td>None</td>
