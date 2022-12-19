@@ -64,6 +64,12 @@
     	<td>The purpose of this project is to create a net income computation to calculate a worker's net income</td>
     	<td>None</td>
     </tr>
+        <tr>
+    	<th><a href="MIDTERMS/ACTIVITY_5/index.jsp">Activity4</a></th>
+    	<td>GWA to GPA Converter</td>
+    	<td>The purpose of this project is to create a loop looking for the result for the GPA provided.</td>
+    	<td>None</td>
+    </tr>
 </table>
     
     				<script>
