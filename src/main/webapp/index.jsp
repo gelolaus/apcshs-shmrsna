@@ -70,6 +70,24 @@
     	<td>The purpose of this project is to create a loop looking for the result for the GPA provided.</td>
     	<td>None</td>
     </tr>
+        <tr>
+    	<th><a href="MIDTERMS/ACTIVITY_6/index.jsp">Activity5</a></th>
+    	<td>Letter E Asterisk</td>
+    	<td>The purpose of this project is to create a loop printing the Letter E</td>
+    	<td>None</td>
+    </tr>
+            <tr>
+    	<th><a href="MIDTERMS/ACTIVITY_7/index.jsp">Activity6</a></th>
+    	<td>Noise Level Calculator</td>
+    	<td>The purpose of this project is to calculate the noise level based on the input provided by user</td>
+    	<td>None</td>
+    </tr>
+            <tr>
+    	<th><a href="MIDTERMS/ACTIVITY_8/index.jsp">Activity7</a></th>
+    	<td>Skip Counting from 70 to 0</td>
+    	<td>The purpose of this project is to skip count from 70 to 0 by 10s</td>
+    	<td>None</td>
+    </tr>
 </table>
     
     				<script>
