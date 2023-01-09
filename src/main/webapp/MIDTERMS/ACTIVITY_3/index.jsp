@@ -33,6 +33,13 @@
 
                 <a href="../../index.jsp" style="border: none;">Back to Dashboard</a>
 
+<script>
+// Add animation to when the document opens
+$(document).ready(function(){
+    $("body").hide();
+    $("body").fadeIn(1000);
+});
+</script>
 
 </body>
 </html>

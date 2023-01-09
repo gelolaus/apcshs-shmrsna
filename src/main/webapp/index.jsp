@@ -88,6 +88,12 @@
     	<td>The purpose of this project is to skip count from 70 to 0 by 10s</td>
     	<td>None</td>
     </tr>
+            <tr>
+    	<th><a href="MIDTERMS/ACTIVITY_9/index.jsp">Activity8</a></th>
+    	<td>Array Combination</td>
+    	<td>The purpose of this project is to combine the fname and lname array forming a full name output</td>
+    	<td>None</td>
+    </tr>
 </table>
     
     				<script>
@@ -95,12 +101,6 @@
 				$(document).ready(function(){
 				    $("body").hide();
 				    $("body").fadeIn(1000);
-				});
-				
-				// When body is hovered, change the background color to a random color then change everytime you rehover
-				$("body").hover(function(){
-				    var randomColor = Math.floor(Math.random()*16777215).toString(16);
-				    $("body").css("background-color", "#" + randomColor);
 				});
 				</script>
 

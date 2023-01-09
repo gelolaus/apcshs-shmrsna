@@ -52,11 +52,6 @@
 																$("body").hide();
 																$("body").fadeIn(1000);
 															});
-
-															$("body").hover(function () {
-																var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-																$("body").css("background-color", "#" + randomColor);
-															});
 														</script>
 
 														<br />
