@@ -74,7 +74,7 @@
     	<th><a href="MIDTERMS/ACTIVITY_6/index.jsp">Activity5</a></th>
     	<td>Letter E Asterisk</td>
     	<td>The purpose of this project is to create a loop printing the Letter E</td>
-    	<td>None</td>
+    	<td>Looping Code - Max Chavez</td>
     </tr>
             <tr>
     	<th><a href="MIDTERMS/ACTIVITY_7/index.jsp">Activity6</a></th>
