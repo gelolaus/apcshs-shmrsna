@@ -97,7 +97,13 @@
                 <tr>
     	<th><a href="MIDTERMS/ACTIVITY_10/index.jsp">Activity9</a></th>
     	<td>Teen Age</td>
-    	<td></td>
+    	<td>The purpose of this project is to select only teen ages in the list of array.</td>
+    	<td>None</td>
+    </tr>
+                <tr>
+    	<th><a href="MIDTERMS/ACTIVITY_11/index.jsp">Demo2</a></th>
+    	<td>Input Output</td>
+    	<td>The purpose of this project is to create an index.jsp and accept.jsp that will communicate with one another.</td>
     	<td>None</td>
     </tr>
 </table>
