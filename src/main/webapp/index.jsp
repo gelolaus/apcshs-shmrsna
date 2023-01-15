@@ -106,6 +106,12 @@
     	<td>The purpose of this project is to create an index.jsp and accept.jsp that will communicate with one another.</td>
     	<td>None</td>
     </tr>
+                <tr>
+    	<th><a href="MIDTERMS/ACTIVITY_12/index.jsp">Demo2</a></th>
+    	<td>Cookies</td>
+    	<td></td>
+    	<td>None</td>
+    </tr>
 </table>
     
     				<script>
