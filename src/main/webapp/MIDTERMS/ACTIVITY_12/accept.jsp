@@ -34,12 +34,12 @@
 <%@ page import="java.util.*" %>
 
 <%
-    String firstName = (String) session.getAttribute("firstName");
-    String lastName = (String) session.getAttribute("lastName");
-    String age = (String) session.getAttribute("age");
-    String address = (String) session.getAttribute("address");
-    String contactNo = (String) session.getAttribute("contactNo");
-    String gender = (String) session.getAttribute("gender");
+    String firstName = session.getAttribute("firstName");
+    String lastName = session.getAttribute("lastName");
+    String age = session.getAttribute("age");
+    String address = session.getAttribute("address");
+    String contactNo = session.getAttribute("contactNo");
+    String gender = session.getAttribute("gender");
 
     out.println("First Name: " + firstName + "<br>");
     out.println("Last Name: " + lastName + "<br>");
