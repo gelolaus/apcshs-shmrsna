@@ -7,40 +7,10 @@
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <html>
-<style>
-.styled-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    font-family: sans-serif;
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-.styled-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: left;
-}
-.styled-table th, 
-.styled-table td {
-    padding: 12px 15px;
-}
-.styled-table tbody tr {
-    border-bottom: 1px solid #dddddd;
-}
-
-.styled-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-
-.styled-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-}
-.styled-table tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
-}
-</style>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
 <body>
 <%
 try {
@@ -62,15 +32,18 @@ resultSet = statement.executeQuery(sql);
 
 while(resultSet.next()){
 %>
-<table class="styled-table">
+<table style="border-style: dotted; padding: 10px;">
 <tbody>
 <tr class="active-row">
+<td><%=resultSet.getString("member_id") %></td>
 <td><%=resultSet.getString("first_name") %></td>
 <td><%=resultSet.getString("middle_name") %></td>
 <td><%=resultSet.getString("last_name") %></td>
+<td><a href="updater.jsp?member_id=<%=resultSet.getString("member_id")%>">Update</a></td>
+<td><a href="deleter.jsp?member_id=<%=resultSet.getString("member_id")%>">Delete</a></td>
 </tr>
  </tbody>
-</table>
+</table><br>
 <% 
 }
 
@@ -78,7 +51,17 @@ while(resultSet.next()){
 e.printStackTrace();
 }
 %>
-
+<%
+ResultSet getRowNum = statement.executeQuery("SELECT COUNT(member_id) FROM member_info;");
+getRowNum.next();
+int rowNum = getRowNum.getInt(1);
+%>
+<p><b>
+<%
+out.println("Current Number of Users: "+ rowNum);
+%>
+</b>
+</p>
 <a href="index.jsp">Add New Record</a>
 </body>
 </html>
